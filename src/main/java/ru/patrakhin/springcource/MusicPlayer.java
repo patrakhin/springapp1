@@ -2,6 +2,7 @@ package ru.patrakhin.springcource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -9,6 +10,18 @@ import java.util.List;
 
 @Component
 public class MusicPlayer {
+    @Value("${musicPlayer.name}")
+    private String name;
+    @Value("${musicPlayer.volume}")
+    private int volume;
+
+    public String getName() {
+        return name;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
 
     private Music music1;
     private Music music2;
@@ -19,7 +32,7 @@ public class MusicPlayer {
         this.music2 = music2;
     }
 
-    private List<Music> musicList = new ArrayList<Music>();
+/*    private List<Music> musicList = new ArrayList<Music>();
     private String name;
     private int volume;
 
@@ -47,7 +60,7 @@ public class MusicPlayer {
         for(Music music : musicList) {
             System.out.println("Playing: " + music.getSong());
         }
-    }
+    }*/
     //IoC
 
     /*public MusicPlayer(Music music) {
