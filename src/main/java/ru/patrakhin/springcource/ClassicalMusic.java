@@ -7,15 +7,15 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-@Component
+//@Component
 
 public class ClassicalMusic implements Music{
 
-    private ClassicalMusic(){}
+    //private ClassicalMusic(){}
 
-    public static ClassicalMusic getClassicalMusic(){
+    /*public static ClassicalMusic getClassicalMusic(){
         return new ClassicalMusic();
-    }
+    }*/
 
     @PostConstruct
     public void doMyInit(){

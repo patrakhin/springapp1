@@ -1,14 +1,17 @@
 package ru.patrakhin.springcource;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import java.util.Arrays;
 
 
 public class TestSpring {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-                "applicationContext.xml"
+/*        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+                "applicationContext_xml.txt"
+        );*/
+
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
+                SpringConfig.class
         );
 
         /*Music music = context.getBean("rockMusic", Music.class);
